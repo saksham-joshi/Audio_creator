@@ -1,0 +1,7 @@
+QMessageBox{
+    background-color: rgb(255, 0, 119);
+    color:rgb(0, 247, 255);
+}
+QLabel{
+    color:white;
+}

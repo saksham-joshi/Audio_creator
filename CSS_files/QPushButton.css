@@ -1,0 +1,14 @@
+QPushButton{
+    color:white;
+    /* background-color: rgb(0, 110, 255); */
+    background-color: #b82390;
+    border-radius: 22%;
+}
+QPushButton:hover{
+    background-color: rgb(32, 32, 205);
+    color:wheat;
+}
+QPushButton:clicked{
+    background-color: aqua;
+    color:black;
+}

@@ -1,0 +1,7 @@
+QLineEdit{
+    background-color: white;
+    color:rgb(63, 63, 63);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    border-radius: 15px;
+}

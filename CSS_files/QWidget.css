@@ -1,0 +1,3 @@
+QWidget{
+    background-color: qlineargradient(y1 : 0 , y2 : 1, stop : 0.2 #ff34c9 , stop : 0.9 #276bff);
+}

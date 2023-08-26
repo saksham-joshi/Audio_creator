@@ -1,0 +1,9 @@
+QMenu{
+    color:white;
+    background-color: rgb(157, 0, 63);
+    border-bottom-right-radius: 18px;
+}
+QMenu::item:selected{
+    background-color:rgb(254, 119, 173) ;
+    color:black;
+}

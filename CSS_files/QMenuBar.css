@@ -1,0 +1,10 @@
+QMenuBar{
+    color:white;
+    background-color: rgb(255, 0, 136);
+    border-bottom-right-radius: 8%;
+}
+QMenuBar::item:selected{
+    border-bottom-right-radius: 8%;
+    background-color: rgb(163, 0, 155);
+    color:rgb(188, 188, 188);
+}
