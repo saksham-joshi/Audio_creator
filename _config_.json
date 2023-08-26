@@ -238,10 +238,10 @@
         "vu",
         "ws"
     ],
-    "current_language": "hi : Hindi",
+    "current_language": "en : English",
     "current_accent": "com",
     "about_message": "| Developed by : SAKSHAM JOSHI.\n| Github : https://github.com/saksham-joshi\n| Linkedin : https://www.linkedin.com/in/sakshamjoshi27/\n| Twitter : https://twitter.com/sakshamjoshi27/\n| Developed in : Python.\n| GUI Module : PyQT5.\n| Back-End Module : gTTS.\n| Code Editor : Microsoft VS Code.",
     "save_location": "Audios/",
-    "play_cmd": "start",
-    "OS_checked": true
+    "play_cmd": "",
+    "OS_checked": false
 }
