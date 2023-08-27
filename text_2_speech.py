@@ -1,16 +1,18 @@
 from gtts import gTTS
 from gtts.tts import gTTSError
 from os import system
-
+from Json_Manip import json_manip
 
 def create_audio(text : str , lang : str , accent : str, directory : str,fast : bool) -> str :
     try :
         lang = lang[:lang.index(" ")]
         text= text.strip()
+        
         if text.__len__() == 0 :
             return ""
         x = gTTS(text=text,tld=accent,lang=lang,slow= not fast)
         path : str
+        
         if directory.__len__() == 0 :
             path = "Audios/"
         else :
@@ -25,8 +27,13 @@ def create_audio(text : str , lang : str , accent : str, directory : str,fast : 
         except :
             path = "Audios/tts_audio.mp3"
         x.save(path)
+
+        play_cmd = json_manip.get_value("play_cmd")
+        if play_cmd == "unknown" :
+            return "This App is unable to detect your OS so the audio will not autoplay!\n\n  #> Succesfully save file : "+path
+        
         try :
-            system("start "+path)
+            system(play_cmd+" "+path)
         except :
             pass
         return "Succesfully saved file : "+path
@@ -39,5 +46,3 @@ def create_audio(text : str , lang : str , accent : str, directory : str,fast : 
     except gTTSError as e :
         return "You are not connected to the Internet . : "
     return ""
-
-#print(create_audio("rom rom bhaiyo ...... system paadh denge", lang='hi : English' , accent= 'com' , directory="D:/New folder (4)/",fast= True))
