@@ -1,6 +1,5 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QTextEdit, QPushButton, QComboBox, QMenuBar, QAction, QMessageBox, QLabel, QFileDialog, QLineEdit, QCheckBox
 from PyQt5.QtGui import QIcon, QFont
-from json import load, dump
 
 from text_2_speech import create_audio
 
@@ -45,7 +44,7 @@ class UI(QWidget):
         label_lang.setStyleSheet(open("CSS_files/QLabel.css").read())
 
         this.language = QComboBox(this)
-        this.language.addItems(load(open("_config_.json"))["languages"])
+        this.language.addItems(json_manip.get_value("languages"))
         this.language.setGeometry(30, label_lang.y()+label_lang.height(), this.width()//3, 30)
         this.language.setStyleSheet(open("CSS_files/QComboBox.css").read())
         this.language.setFont(this.font_combobox)
